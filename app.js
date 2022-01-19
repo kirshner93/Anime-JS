@@ -39,6 +39,14 @@ var animation = anime.timeline({
         easing: 'spring(1, 80, 10, 0)'
         
 
-    })
+    });
+
+    anime({
+        targets: '#btn',
+        translateY: 1150,
+        loop: 1,
+        easing: 'easeOutInQuad',
+        duration: 2500,
+      });
   }
  
