@@ -5,100 +5,107 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>moveTo</title>
+    <title>Anime JS</title>
     <style>
-             
-
+        
         body {
-            margin: 0 auto;
-                                    
-        }
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            
 
-        header, section {
             display: flex;
             justify-content: center;
-            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(rgb(39, 16, 82),rgb(124, 84, 197))
+        }
+
+        section {
+            position: relative;
+            width: 100%;
             height: 100vh;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-                       
-        }
-        button, a {
-            padding: 20px 40px;
-            text-transform: uppercase;
-            background-color: #eee;
-            
-            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
             
         }
-        button:hover {
-            background-color: rgb(216, 130, 197);
-            transition: all 0.3s ease 0s;
-            cursor: pointer;
-            
-            
-            
+        section img {
+            position:absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+           
+            pointer-events: none;
         }
-        .link {
-            display: block;
-            margin: 25px;
+
+        section img#moon {
+            top: -100%;
+            mix-blend-mode: screen;
+        }
+        section img#stars {
+            top: -100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        section img#mountains_behind {
+            bottom: -100%;
+            top: initial;
+        }
+        section img#mountains_front {
+            bottom: -100%;
+            top: initial;
+            z-index: 1000;
+        }
+        #text {
+            position: absolute;
+            color: #fff;
+            font-size: 9vw;
+            font-weight: 200;
+        }
+        #text span {
+            font-weight: 700;
+        }
+        #btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            margin-top: 80px;
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 50px;
+            background: #fff;
+            border-radius: 40px;
+            z-index: 1000;
         }
        
     </style>
 </head>
  
 <body>
-    <header id="top" style="background-color: rgb(160, 127, 127);">
-        <div>
-            <h2>use MoveTo()</h2>
-            <button data-target="#contacts">шаг назад</button>
-            <button data-target="#features">шаг вперёд</button>
+    <section id="top">
+        <img src="img/stars.png" id="stars" >
+        <img src="img/moon.png" id="moon" >
+        <img src="img/mountains_behind.png" id="mountains_behind" >
+        <h2 id="text">Anime <span>JS</span></h2>
+        <a href="#" id="btn">Play</a>
+        <img src="img/mountains_front.png" id="mountains_front" >
+            
 
             
-        </div>
+        
 
         
        
 
-    </header>
-
-    <section id="features" style="background-color: rgb(165, 100, 226);">
-        <div>
-            <h2>Features</h2>
-            <button data-target="#top">шаг назад</button>
-            <button data-target="#map">шаг вперёд</button>
-        <div class="link">
-            <a href="#top" type="button">на главную</a>
-        </div>
-            
-        </div>
-    </section>
-
-    <section id="map" style="background-color: rgb(33, 139, 74);">
-        <div>
-            <h2>Map</h2>
-            <button data-target="#features">шаг назад</button>
-            <button data-target="#contacts">шаг вперёд</button>
-
-            <div class="link">
-                <a href="#top" type="button">на главную</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacts" style="background-color: rgb(255, 169, 251);">
-        <div>
-            <h2>Contacts</h2>
-            <button data-target="#map">шаг назад</button>
-            <button data-target="#top">на главную</button>
-
-        </div>
     </section>
     
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moveTo/1.8.2/moveTo.min.js"></script>
     <script src="app.js"></script>
 </body>
