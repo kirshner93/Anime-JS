@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lodash</title>
+    <style>
+             
+
+        body {
+            margin: 0 auto;
+                                    
+        }
+
+        header, section {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+                       
+        }
+        button, a {
+            padding: 20px 40px;
+            text-transform: uppercase;
+            
+            
+            
+        }
+        button:hover {
+            background-color: rgb(216, 130, 197);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            
+            
+            
+        }
+       
+    </style>
+</head>
+ 
+<body>
+    <header id="top" style="background-color: rgb(160, 127, 127);">
+        <div>
+            <h2>use MoveTo()</h2>
+            <button data-target="#contacts">шаг назад</button>
+            <button data-target="#features">шаг вперёд</button>
+
+            
+        </div>
+
+        
+       
+
+    </header>
+
+    <section id="features" style="background-color: rgb(165, 100, 226);">
+        <div>
+            <h2>Features</h2>
+            <button data-target="#top">шаг назад</button>
+            <button data-target="#map">шаг вперёд</button>
+
+            <a href="#top" type="button">на главную</a>
+        </div>
+    </section>
+
+    <section id="map" style="background-color: rgb(33, 139, 74);">
+        <div>
+            <h2>Map</h2>
+            <button data-target="#features">шаг назад</button>
+            <button data-target="#contacts">шаг вперёд</button>
+
+            <a href="#top" type="button">на главную</a>
+        </div>
+    </section>
+
+    <section id="contacts" style="background-color: rgb(255, 169, 251);">
+        <div>
+            <h2>Contacts</h2>
+            <button data-target="#map">шаг назад</button>
+            <button data-target="#top">на главную</button>
+
+        </div>
+    </section>
+    
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moveTo/1.8.2/moveTo.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
